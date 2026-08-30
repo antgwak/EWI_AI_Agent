@@ -1,4 +1,4 @@
-# 카드사 리스크 EWI AI Agent
+# 카드사 EWI AI Agent
 
 카드사 패널데이터의 리스크조기경보지표(EWI)를 판정하고, 관련 뉴스·법령/행정규칙을
 자율 검색(Tool Calling)해 3단락 분석 리포트를 자동 생성하는 AI Agent입니다.
