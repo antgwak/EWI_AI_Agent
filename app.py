@@ -13,6 +13,12 @@
     같은 (회사, 분기) 조합은 세션 동안 결과를 캐싱해 재생성 없이 재사용
     (Groq 무료 티어 RPM/TPM 절약 + 반응 속도 개선 목적)
 """
+import os
+import streamlit as st
+
+for key, value in st.secrets.items():
+    os.environ[key] = str(value)
+
 import re
 
 import pandas as pd
@@ -203,7 +209,5 @@ else:
     
     
 ##    
-import streamlit as st
-
 groq_key = st.secrets["GROQ_API_KEY"]
 law_oc = st.secrets["LAW_API_OC"]
