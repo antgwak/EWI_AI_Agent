@@ -28,7 +28,7 @@ CRAWL_STATE_PATH = os.getenv("CRAWL_STATE_PATH", "./crawl_state.json")
 
 # 모델 설정
 EMBEDDING_MODEL_NAME = os.getenv("EMBEDDING_MODEL_NAME", "jhgan/ko-sroberta-multitask")
-GROQ_MODEL_NAME = os.getenv("GROQ_MODEL_NAME", "llama-3.3-70b-versatile")
+GROQ_MODEL_NAME = os.getenv("GROQ_MODEL_NAME", "openai/gpt-oss-120b")
 
 # EWI 판정: 회사별 (평균 - EWI_STD_MULTIPLIER * 표준편차) 이하이면 '경고'
 EWI_STD_MULTIPLIER = 1.5
