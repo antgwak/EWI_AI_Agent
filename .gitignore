@@ -1,0 +1,18 @@
+# 비밀값 (절대 업로드 금지)
+.streamlit/secrets.toml
+
+# 가상환경
+venv/
+.venv/
+env/
+
+.env
+chroma_db/
+
+# 파이썬 캐시
+__pycache__/
+*.pyc
+
+# OS/에디터 잡파일
+.DS_Store
+.vscode/
