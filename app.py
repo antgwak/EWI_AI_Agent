@@ -15,9 +15,8 @@
 """
 import os
 import streamlit as st
-
-for key, value in st.secrets.items():
-    os.environ[key] = str(value)
+groq_key = st.secrets["GROQ_API_KEY"]
+law_oc = st.secrets["LAW_API_OC"]
 
 import re
 
@@ -208,6 +207,4 @@ else:
     st.info("아직 생성된 리포트가 없습니다. 위 [리포트 생성] 버튼을 눌러주세요.")
     
     
-##    
-groq_key = st.secrets["GROQ_API_KEY"]
-law_oc = st.secrets["LAW_API_OC"]
+

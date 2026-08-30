@@ -3,12 +3,25 @@
 Colab의 userdata 대신 .env 파일 + python-dotenv를 사용합니다.
 """
 import os
+import streamlit as st
 from dotenv import load_dotenv
 
 load_dotenv()
 
-GROQ_API_KEY = os.getenv("GROQ_API_KEY")
-LAW_API_OC = os.getenv("LAW_API_OC")
+def get_secret(key, default=None):
+    # 1. 먼저 os.environ / .env에서 찾아보고
+    value = os.getenv(key)
+    if value:
+        return value
+    # 2. 없으면 Streamlit Cloud의 secrets에서 찾기
+    try:
+        return st.secrets[key]
+    except Exception:
+        return default
+
+GROQ_API_KEY = get_secret("GROQ_API_KEY")
+LAW_API_OC = get_secret("LAW_API_OC")
+
 
 if not GROQ_API_KEY:
     raise ValueError(
