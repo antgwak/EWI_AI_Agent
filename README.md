@@ -1,7 +1,7 @@
-# 카드사 EWI 분석 에이전트 (LangGraph + Groq + ChromaDB)
+# 카드사 EWI AI Agent
 
 카드사 패널데이터의 리스크조기경보지표(EWI)를 판정하고, 관련 뉴스·법령/행정규칙을
-자율 검색(Tool Calling)해 3단락 분석 리포트를 자동 생성하는 LangGraph 에이전트입니다.
+자율 검색(Tool Calling)해 3단락 분석 리포트를 자동 생성하는 AI Agent입니다.
 
 ## 구조
 
@@ -34,7 +34,7 @@ cp .env.example .env            # 이후 .env 파일 열어서 값 채우기
 
 `.env`에 채워야 하는 값:
 - `GROQ_API_KEY` : Groq API 키
-- `LAW_API_OC` : law.go.kr Open API 인증키(이메일 아이디)
+- `LAW_API_OC` : law.go.kr Open API 키
 
 ## 실행 순서
 
