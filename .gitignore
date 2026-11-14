@@ -7,7 +7,7 @@ venv/
 env/
 
 .env
-chroma_db/
+
 
 # 파이썬 캐시
 __pycache__/
